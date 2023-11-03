@@ -1,0 +1,343 @@
+1.Palindrome-Integer(C++)
+
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+  int n,r,sum=0,temp;    
+  cout<<"Enter the Number=";    
+  cin>>n;    
+ temp=n;    
+ while(n>0)    
+{    
+ r=n%10;    
+ sum=(sum*10)+r;    
+ n=n/10;    
+}    
+if(temp==sum)    
+cout<<"Number is Palindrome.";    
+else    
+cout<<"Number is not Palindrome.";   
+  return 0;  
+}  
+
+
+
+
+1.Palindrome-String(C++)
+
+#include <iostream>
+using namespace std;
+string isPalindrome(string S)
+{
+	string P = S;
+	reverse(P.begin(), P.end());
+	if (S == P) 
+	{
+	
+		return "Yes";
+	}
+	else 
+	{
+		return "No";
+	}
+}
+int main()
+{
+	string S = "ABCDCBA";
+	cout << isPalindrome(S);
+	return 0;
+}
+
+
+
+
+
+
+2.Fibonacii Series
+
+#include <iostream>  
+using namespace std;  
+int main() {  
+  int n1=0,n2=1,n3,i,number;    
+ cout<<"Enter the number of elements: ";    
+ cin>>number;    
+ cout<<n1<<" "<<n2<<" ";    
+ for(i=2;i<number;++i)   
+ {    
+  n3=n1+n2;    
+  cout<<n3<<" ";    
+  n1=n2;    
+  n2=n3;    
+ }    
+   return 0;  
+ }  
+
+
+
+
+
+
+
+3.Reverse String
+
+#include <algorithm> 
+#include<iostream>
+#include<string>
+using namespace std; 
+int main() 
+{ 
+    string str = "Journal Dev reverse example"; 
+    reverse(str.begin(), str.end()); 
+	cout<<"\n"<<str; 
+    return 0;
+}
+
+
+
+
+
+
+3.Reverse Number
+
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+int n, reverse=0, rem;    
+cout<<"Enter a number: ";    
+cin>>n;    
+  while(n!=0)    
+  {    
+     rem=n%10;      
+     reverse=reverse*10+rem;    
+     n/=10;    
+  }    
+ cout<<"Reversed Number: "<<reverse<<endl;     
+return 0;  
+}  
+
+
+
+
+
+
+
+4.Leap Year
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+  int year;
+
+  cout << "Enter a year: ";
+  cin >> year;
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) 
+  {
+    cout << year << " is a leap year.";
+  }
+  else 
+  {
+    cout << year << " is not a leap year.";
+  }
+
+  return 0;
+}
+
+
+
+
+
+
+
+5.Factorial
+
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+   int i,fact=1,number;    
+  cout<<"Enter any Number: ";    
+ cin>>number;    
+  for(i=1;i<=number;i++){    
+      fact=fact*i;    
+  }    
+  cout<<"Factorial of " <<number<<" is: "<<fact<<endl;  
+  return 0;  
+}  
+
+
+
+
+
+
+
+6.Compound Interest
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main(){
+    float p, r, t, CI, amount;
+
+    cout << "Enter the principal amount: ";
+    cin >> p;
+    cout << "Enter the rate of interest: ";
+    cin >> r;
+    cout << "Enter the time period in years: ";
+    cin >> t;
+
+    amount = p * (pow((1 + r/100), t));
+    
+    CI = amount - p;
+
+    cout << "Compound interest is = " << CI << endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+7.GCD & LCM
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "\n\nWelcome to Studytonight :-)\n\n\n";
+    cout << " =====  Program to find the GCD and LCM of two numbers ===== \n\n";
+
+    int n1, n2, i;
+
+    int gcd = 1, lcm = 1;  
+
+    cout << " Enter the two numbers you want to find the GCD and LCM of : \n\n";
+    cin >> n1 >> n2;
+
+    for ( i = 1; i < 1000; i++)
+    {
+        if ((n1 % i == 0) && (n2 % i == 0))
+        {
+            gcd = i;          
+        }
+    }
+
+    lcm = (n1 * n2) / gcd;
+
+    cout << " \n\nThe GCD of the two numbers : " << n1 << " and " << n2 << " is : " << gcd;
+    cout << " \n\nThe LCM of the two numbers : " << n1 << " and " << n2 << " is : " << lcm << "\n\n";
+    cout << "\n\n\n";
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+8.Reverse Array
+
+#include <iostream>  
+using namespace std;  
+int main ()  
+{  
+    int arr[50], num, temp, i, j;  
+    cout << " Please, enter the total no. you want to enter: ";  
+    cin >> num;  
+         
+    for (i = 0; i < num; i++)  
+    {  
+        cout << " Enter the element " << i+1 << ": ";  
+        cin >> arr[i];  
+    }  
+      
+    for ( i = 0, j = num - 1; i < num/2; i++, j--)  
+    {     
+        temp = arr[i];  
+        arr[i] = arr[j];  
+        arr[j] = temp;  
+    }  
+
+    cout << "\n Reverse all elements of the array: " << endl;  
+
+    for ( i = 0; i < num; i++)  
+    {  
+        cout << arr[i] << " ";  
+    }  
+    return 0;  
+}  
+
+
+
+
+
+
+
+
+
+9.Swap (Without 3rd variable)
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    
+    int a = 5, b = 10;
+
+    cout << "Before swapping." << endl;
+    cout << "a = " << a << ", b = " << b << endl;
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    cout << "\nAfter swapping." << endl;
+    cout << "a = " << a << ", b = " << b << endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+9.Swap (With using 3rd variable)
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a = 5, b = 10, temp;
+
+    cout << "Before swapping." << endl;
+    cout << "a = " << a << ", b = " << b << endl;
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    cout << "\nAfter swapping." << endl;
+    cout << "a = " << a << ", b = " << b << endl;
+    return 0;
+}
+
+
+
+
+
+
+
+10.Printing Vowels & Consonants from String
