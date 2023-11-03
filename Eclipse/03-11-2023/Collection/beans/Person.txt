@@ -1,0 +1,69 @@
+package com.demo.beans;
+
+public class Person implements Comparable<Person>
+{
+	
+	private int pid;
+	private String pname;
+	private String mobile;
+
+	public Person()
+        {
+		pid=0;
+		pname=null;
+		mobile=null;
+	}
+
+	public Person(int pid,String pname,String mob) 
+        {
+		this.pid=pid;
+		this.pname=pname;
+		this.mobile=mob;
+		
+	}
+		
+	
+	public boolean equals(Object obj) 
+	{
+		System.out.println("in person equals method--->"+this.pid+"-----"+((Person)obj).pid);
+		return this.pid==((Person)obj).pid; //&& this.pname.equals(((Person)obj).pname);
+		
+		
+		
+	}
+	
+	public int hashCode() 
+	{
+		System.out.println("in person hashCode method--->"+this.pid);
+		return this.pid;
+	}
+	
+	
+	public void setPid(int pid) {
+		this.pid=pid;
+	}
+	public void setPname(String nm) {
+		this.pname=nm;
+	}
+	public void setMobile(String m) {
+		this.mobile=m;
+	}
+	public int getPid() {
+		return this.pid;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	
+	public String toString() {
+		return "pid: "+this.pid+"\nName: "+this.pname+"\nMobile: "+this.mobile;
+	}
+	
+	public int compareTo(Person o) {
+		return this.pname.compareTo(o.pname);
+	}
+
+}
