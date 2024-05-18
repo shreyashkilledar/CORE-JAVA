@@ -1,16 +1,10 @@
 package bank1;
 
 import java.util.Scanner;
-
-
-
 public class AccontService {
 static Account[] arr=new Account[100];
-	
-	static int cnt =0;
-	
-
-	public static void addnewAccount(int ch) 
+static int cnt =0;
+public static void addnewAccount(int ch) 
 	{
 		Scanner s=new Scanner(System.in);
 //		System.out.println("Enter ifsc");
